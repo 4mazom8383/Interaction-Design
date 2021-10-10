@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Interaction-Design/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/Interaction-Design/static/js/main.4a11b521.chunk.js",
-    "main.js.map": "/Interaction-Design/static/js/main.4a11b521.chunk.js.map",
-    "runtime-main.js": "/Interaction-Design/static/js/runtime-main.6f91a1f3.js",
-    "runtime-main.js.map": "/Interaction-Design/static/js/runtime-main.6f91a1f3.js.map",
-    "static/js/2.2b9f51ef.chunk.js": "/Interaction-Design/static/js/2.2b9f51ef.chunk.js",
-    "static/js/2.2b9f51ef.chunk.js.map": "/Interaction-Design/static/js/2.2b9f51ef.chunk.js.map",
-    "static/js/3.03e7027f.chunk.js": "/Interaction-Design/static/js/3.03e7027f.chunk.js",
-    "static/js/3.03e7027f.chunk.js.map": "/Interaction-Design/static/js/3.03e7027f.chunk.js.map",
-    "index.html": "/Interaction-Design/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/Interaction-Design/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.2b9f51ef.chunk.js.LICENSE.txt": "/Interaction-Design/static/js/2.2b9f51ef.chunk.js.LICENSE.txt",
-    "static/media/runner.d0ad20b8.gif": "/Interaction-Design/static/media/runner.d0ad20b8.gif"
+    "main.css": "/interaction-design/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/interaction-design/static/js/main.4a11b521.chunk.js",
+    "main.js.map": "/interaction-design/static/js/main.4a11b521.chunk.js.map",
+    "runtime-main.js": "/interaction-design/static/js/runtime-main.3395f4e9.js",
+    "runtime-main.js.map": "/interaction-design/static/js/runtime-main.3395f4e9.js.map",
+    "static/js/2.1fbed3c6.chunk.js": "/interaction-design/static/js/2.1fbed3c6.chunk.js",
+    "static/js/2.1fbed3c6.chunk.js.map": "/interaction-design/static/js/2.1fbed3c6.chunk.js.map",
+    "static/js/3.03e7027f.chunk.js": "/interaction-design/static/js/3.03e7027f.chunk.js",
+    "static/js/3.03e7027f.chunk.js.map": "/interaction-design/static/js/3.03e7027f.chunk.js.map",
+    "index.html": "/interaction-design/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/interaction-design/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.1fbed3c6.chunk.js.LICENSE.txt": "/interaction-design/static/js/2.1fbed3c6.chunk.js.LICENSE.txt",
+    "static/media/runner.d0ad20b8.gif": "/interaction-design/static/media/runner.d0ad20b8.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.6f91a1f3.js",
-    "static/js/2.2b9f51ef.chunk.js",
+    "static/js/runtime-main.3395f4e9.js",
+    "static/js/2.1fbed3c6.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
     "static/js/main.4a11b521.chunk.js"
   ]
