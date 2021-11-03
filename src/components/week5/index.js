@@ -23,6 +23,55 @@ const StyledOutWrapper = styled.div`
     width: 100%;
     background: #DCDCDC;
 `
+const FilledStyle2 = styled.a`
+    height: 48px;
+    font-size: 1rem;
+    padding: 0 16px 0 16px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid #198DE1;
+    border: none;
+    color: white;
+    transition: background 0.4s, color 0.2s, width 0.2s;
+
+
+    &:hover {
+        cursor: pointer;
+        background: #ECE0FD;
+        color: #D71F31;
+        width: 200px;
+        svg{
+          fill: #D71F31;
+        }
+    }
+    &:active {
+    }
+
+`
+const Icon = styled.svg`
+
+  transition: fill 0.25s;
+  fill: white;
+  
+
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+
+
+  margin-left: -4px;
+  margin-right: 8px;
+  stroke-width: 0.5;
+
+  transition: transform 2s;
+
+  &:hover{
+    /*transform: rotate(45deg);*/
+    
+  }
+`;
 
 /* Phone Frame */
 const PhoneFrame = styled.div`
@@ -45,13 +94,21 @@ const PhoneFrame = styled.div`
       margin-bottom: 2em;
     }
     nav{
-      width: 0px;
-      height: 100vh;
-      background:red;
+      width: 300px;
+      height: 830px;
+      align-items: center;
+      display: flex;
+      background: linear-gradient(180deg, #D71F31 0%, #303491 100%);
       position: absolute;
-      right:0;
+      left:0;
       z-index: 9;
+      border-radius: 40px 0px 0px 40px;
     }
+    nav:hover{
+    }
+    nav h1{color:white;font-weight: normal;padding-left: 16px;}
+    ul{padding-left: 16px;}
+    nav ul li{list-style-type: none;margin: 0px 0px 16px 0px;}
 
 
 `
@@ -125,7 +182,42 @@ const Week3 = () => {
     return (
       <StyledOutWrapper>
         <PhoneFrame>
-          <nav></nav>
+          <nav>
+            
+            <ul>
+            <h1>Hello <b>Hakim,</b><br />have a nice day!</h1>
+              <li>
+                <FilledStyle2>
+                  <Icon viewBox="0 0 24 24"><path d="M21 5.84211V7.73684H18.1579V10.5789H16.2632V7.73684H13.4211V5.84211H16.2632V3H18.1579V5.84211H21ZM18.1579 19.1053H4.89474V5.84211H10.5789V3.94737H4.89474C3.85263 3.94737 3 4.8 3 5.84211V19.1053C3 20.1474 3.85263 21 4.89474 21H18.1579C19.2 21 20.0526 20.1474 20.0526 19.1053V13.4211H18.1579V19.1053ZM14.3684 13.4211V17.2105H16.2632V13.4211H14.3684ZM10.5789 17.2105H12.4737V9.63158H10.5789V17.2105ZM8.68421 17.2105V11.5263H6.78947V17.2105H8.68421Z"/></Icon>
+                  <span>Profile</span>
+                </FilledStyle2>
+              </li>
+              <li>
+                <FilledStyle2>
+                  <Icon viewBox="0 0 24 24"><path d="M21 5.84211V7.73684H18.1579V10.5789H16.2632V7.73684H13.4211V5.84211H16.2632V3H18.1579V5.84211H21ZM18.1579 19.1053H4.89474V5.84211H10.5789V3.94737H4.89474C3.85263 3.94737 3 4.8 3 5.84211V19.1053C3 20.1474 3.85263 21 4.89474 21H18.1579C19.2 21 20.0526 20.1474 20.0526 19.1053V13.4211H18.1579V19.1053ZM14.3684 13.4211V17.2105H16.2632V13.4211H14.3684ZM10.5789 17.2105H12.4737V9.63158H10.5789V17.2105ZM8.68421 17.2105V11.5263H6.78947V17.2105H8.68421Z"/></Icon>
+                  <span>Balance</span>
+                </FilledStyle2>
+              </li>
+              <li>
+                <FilledStyle2>
+                  <Icon viewBox="0 0 24 24"><path d="M21 5.84211V7.73684H18.1579V10.5789H16.2632V7.73684H13.4211V5.84211H16.2632V3H18.1579V5.84211H21ZM18.1579 19.1053H4.89474V5.84211H10.5789V3.94737H4.89474C3.85263 3.94737 3 4.8 3 5.84211V19.1053C3 20.1474 3.85263 21 4.89474 21H18.1579C19.2 21 20.0526 20.1474 20.0526 19.1053V13.4211H18.1579V19.1053ZM14.3684 13.4211V17.2105H16.2632V13.4211H14.3684ZM10.5789 17.2105H12.4737V9.63158H10.5789V17.2105ZM8.68421 17.2105V11.5263H6.78947V17.2105H8.68421Z"/></Icon>
+                  <span>Support</span>
+                </FilledStyle2>
+              </li>
+              <li>
+                <FilledStyle2>
+                  <Icon viewBox="0 0 24 24"><path d="M21 5.84211V7.73684H18.1579V10.5789H16.2632V7.73684H13.4211V5.84211H16.2632V3H18.1579V5.84211H21ZM18.1579 19.1053H4.89474V5.84211H10.5789V3.94737H4.89474C3.85263 3.94737 3 4.8 3 5.84211V19.1053C3 20.1474 3.85263 21 4.89474 21H18.1579C19.2 21 20.0526 20.1474 20.0526 19.1053V13.4211H18.1579V19.1053ZM14.3684 13.4211V17.2105H16.2632V13.4211H14.3684ZM10.5789 17.2105H12.4737V9.63158H10.5789V17.2105ZM8.68421 17.2105V11.5263H6.78947V17.2105H8.68421Z"/></Icon>
+                  <span>Dark Theme</span>
+                </FilledStyle2>
+              </li>
+              <li>
+                <FilledStyle2>
+                  <Icon viewBox="0 0 24 24"><path d="M21 5.84211V7.73684H18.1579V10.5789H16.2632V7.73684H13.4211V5.84211H16.2632V3H18.1579V5.84211H21ZM18.1579 19.1053H4.89474V5.84211H10.5789V3.94737H4.89474C3.85263 3.94737 3 4.8 3 5.84211V19.1053C3 20.1474 3.85263 21 4.89474 21H18.1579C19.2 21 20.0526 20.1474 20.0526 19.1053V13.4211H18.1579V19.1053ZM14.3684 13.4211V17.2105H16.2632V13.4211H14.3684ZM10.5789 17.2105H12.4737V9.63158H10.5789V17.2105ZM8.68421 17.2105V11.5263H6.78947V17.2105H8.68421Z"/></Icon>
+                  <span>Surveys</span>
+                </FilledStyle2>
+              </li>   
+            </ul>
+          </nav>
           <header>
             <Nav id="nav" ><b>X</b></Nav>
             <Tabs>
