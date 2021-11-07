@@ -28,7 +28,7 @@ const StyledWrapper = styled.div`
 `
 
 const Img = styled.img`
-    width: 65%;
+    width: 60%;
     margin: 4em auto 1em auto;
     display: block;
 `

@@ -1,5 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import Navigation from "./index.js";
+import {MenuTabs} from "./index.js";
+import {HiddenMenu} from "./index.js";
+import {BottomNavigation} from "./index.js";
 
 <Meta title="Navigation"  component="Navigation" />
 
@@ -8,15 +10,38 @@ import Navigation from "./index.js";
 With `MDX`, we can define a story for `Checkbox` right in the middle of our
 Markdown documentation.
 
-## Navigation Types
+## Navigation - Menu Tabs
 
 With `MDX`, we can define a story for `Checkbox` right in the middle of our
 Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in the middle of our
 Markdown documentation.
 
 <Canvas>
-  <Story name="Navigation">
-      <Navigation />
+  <Story name="MenuTabs">
+      <MenuTabs />
   </Story>
 </Canvas>
 
+## Navigation - Modal drawer
+
+With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.
+
+<Canvas>
+  <Story name="HiddenMenu">
+      <HiddenMenu />
+  </Story>
+</Canvas>
+
+## Navigation - Bottom drawer
+
+With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.
+
+<Canvas>
+  <Story name="BottomNavigation">
+      <BottomNavigation />
+  </Story>
+</Canvas>

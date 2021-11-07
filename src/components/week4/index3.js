@@ -49,12 +49,9 @@ const FormTxt = styled.form`
 
 
     label:focus-within{
-
       span:nth-of-type(1){
         opacity:1;
-      }
-
-      
+      }  
     }
 
     input{
@@ -122,6 +119,9 @@ const Lines = styled.div`
   }
   hr{
     width:180px;
+    border: 0;
+    background-color:red;
+    height:1px;
   }
 `
 
