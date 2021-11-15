@@ -2,37 +2,101 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import {MenuTabs} from "./index.js";
 import {HiddenMenu} from "./index.js";
 import {BottomNavigation} from "./index.js";
+import modelNavigation from "./assets/navigation_model.jpg"
+import modelAnatomy from "./assets/anatomy.jpg"
+import modelWireframe from "./assets/wireframe.jpg"
+import bottomNavDesign from "./assets/design_bottomNav.jpg";
+import bottomNavAnatomy from "./assets/anatomy_bottomNav.jpg";
+import bottomNavWireframe from "./assets/wireframe_bottomNav.jpg";
+import states from "./assets/states.jpg";
+
 
 <Meta title="Navigation"  component="Navigation" />
 
 # Navigation Components
 
+.
+
+## I. Navigation Model
+
 With `MDX`, we can define a story for `Checkbox` right in the middle of our
 Markdown documentation.
 
-## Navigation - Menu Tabs
+## A. Design - Navigation Model
 
-With `MDX`, we can define a story for `Checkbox` right in the middle of our
-Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in the middle of our
-Markdown documentation.
+<img src={modelNavigation} />
 
-<Canvas>
-  <Story name="MenuTabs">
-      <MenuTabs />
-  </Story>
-</Canvas>
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
 
-## Navigation - Modal drawer
+## B. Wireframe - Navigation Model
 
-With `MDX`, we can define a story for `Checkbox` right in the middle of our
-Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in the middle of our
-Markdown documentation.
+<img src={modelWireframe} />
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+
+## C. Anatomy - Navigation Model
+
+<img src={modelAnatomy} />
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+
+<ol>
+  <li>decimals and a dot for ordered items</li>
+  <li>decimals and a dot for ordered items</li>
+  <li>decimals and a dot for ordered items</li>
+  <li>decimals and a dot for ordered items</li>
+  <li>decimals and a dot for ordered items</li>
+  <li>decimals and a dot for ordered items</li>
+  <li>decimals and a dot for ordered items</li>
+</ol>
+
+## D. Coded Example - Navigation Model
 
 <Canvas>
   <Story name="HiddenMenu">
       <HiddenMenu />
   </Story>
 </Canvas>
+
+## II. Bottom Navigation 
+
+With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.
+
+## A. Navigation Bottom Design
+
+<img src={bottomNavDesign} />
+
+Markdown documentation right in the middle of our Markdown documentation.
+
+## B. Navigation Bottom Anatomy
+
+<img src={bottomNavAnatomy} />
+
+## C. Navigation Bottom Wirframe
+
+<img src={bottomNavWireframe} />
+
+## D. Coded Example - Navigation Bottom
+
+<Canvas>
+  <Story name="BottomNavigation">
+      <BottomNavigation />
+  </Story>
+</Canvas>
+
+
+## Navigation - Modal drawer
+
+With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.
 
 ## Navigation - Bottom drawer
 
@@ -41,7 +105,11 @@ Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in
 Markdown documentation.
 
 <Canvas>
-  <Story name="BottomNavigation">
-      <BottomNavigation />
+  <Story name="MenuTabs">
+    <MenuTabs />
   </Story>
 </Canvas>
+
+## III. Navigation Status
+
+<img src={states} />

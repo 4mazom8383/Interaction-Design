@@ -121,6 +121,7 @@ const PhoneFrame = styled.div`
     #line{height:8px;padding:0px;}
     #full_screen, #Black_screen{width: 100vw; height: 0vh; background: #0404048f; position: absolute; z-index: 0;}
 
+    #IconMenu{position: absolute; left: 30px; top: 60px;cursor: pointer;}
 `
 /*Menu Nav*/
 const Nav = styled.a`
@@ -241,33 +242,7 @@ export  const MenuTabs = () => {
 
 
 /*Hidden Menu*/
-const FilledStyle = styled.button`
-    height: 36px;
-    font-size: .875rem;
-    text-transform: uppercase;
-    margin: 0 auto;
-    padding: 0 16px 0 16px;
 
-    background: linear-gradient(180deg, #5EBBFF 0%, #3B90CD 100%);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0px 2px 2px 0px #00000014;
-    box-shadow: 0px 4px 4px 0px #0000002E;
-
-    transition: box-shadow 0.4s;
-    
-    &:hover {
-        // <Thing> when hovered
-        box-shadow: 0px 6px 6px 0px #00000014;
-        box-shadow: 0px 12px 12px 0px #0000002E;
-        cursor: pointer;
-    }
-    &:active {
-        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.18), 0px 4px 4px rgba(0, 0, 0, 0.08), inset 160px 40px 4px rgba(255, 255, 255, 0.30);
-        border: none;
-    }
-`;
 
 function show_HiddenNav() {
   var bottom_nav = document.getElementById("Nav"),
@@ -287,7 +262,24 @@ export  const HiddenMenu  = () => {
     <StyledOutWrapper>
       <PhoneFrame>
       <div onClick={hide_HiddenNav} id="full_screen"></div>
-      <FilledStyle  onClick={show_HiddenNav}><b>Modal drawer</b></FilledStyle>
+      <a id="IconMenu" onClick={show_HiddenNav}>
+        <svg width="24" height="10" viewBox="0 0 24 10" fill="none">
+          <rect width="24" height="3" rx="1.5" fill="black"/>
+          <rect y="7" width="24" height="3" rx="1.5" fill="black"/>
+        </svg>
+      </a>
+
+      <Container style={{display: "contents"}}>
+          <article>
+            <div><img src={horse2}/></div>
+            <div><img src={horse1}/></div>
+          </article>
+
+          <article>
+            <div><img src={horse4}/></div>
+            <div><img src={horse3}/></div>
+          </article>
+        </Container>
 
       <nav id='Nav'>
         <ul>
@@ -489,7 +481,7 @@ export  const BottomNavigation  = () => {
 
 const Week5 = () => {
     return (
-        <BottomNavigation />
+        <HiddenMenu />
     )
 }
 
