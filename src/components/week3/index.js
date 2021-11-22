@@ -6,7 +6,7 @@ const StyledWrapper = styled.div`
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 `
 
 /* FILLED BUTTON */
@@ -343,23 +343,18 @@ export  const ButtonTxt = () => {
     ] 
 }
 
-
+const Frame = styled.div`
+    width: 250px;
+    height: 250px;
+    background: red;
+`
 const Week3 = () => {
 
     return (
         <StyledWrapper>
-
-
             <ButtonTxt />
-
-
         </StyledWrapper>
-        
-
-
-
     )
-
 }
 
 

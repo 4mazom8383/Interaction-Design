@@ -1,26 +1,55 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import like from "./assets/plus.svg";
-import {FilledButton}  from "./index.js"
-import {Floatings}  from "./index.js"
-import {Stroke}  from "./index.js"
-import {ButtonTxt} from "./index.js"
+import {FilledButton} from "./index.js";
+import {Floatings} from "./index.js";
+import {Stroke} from "./index.js";
+import {ButtonTxt} from "./index.js";
+import design from "./assets/Specs.jpg";
+import anatomy from "./assets/Anatomy.jpg";
+import states from "./assets/states.jpg";
+
 
 <Meta title="Button components"  component="Buttons" />
 
 <img src={like} />
 
-# Button Components
+# Buttons
 
 With `MDX`, we can define a story for `Checkbox` right in the middle of our
 Markdown documentation.
+/ Principles 
+/ Types 
+/ Specs
+/ Behavies or states
 
-## Button Design Principles
+## I. Buttons Design  // Usage // Specs // Types // States 
+
+<img src={design} />
 
 With `MDX`, we can define a story for `Checkbox` right in the middle of our
 Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in the middle of our
 Markdown documentation.
 
-### --
+## II. Buttons Anatomy
+
+<img src={anatomy} />
+
+
+With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.
+
+## IV. Buttons - states
+
+<img src={states} />
+
+## V. Buttons - Coded example 
+
+With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.
+
+### Filled in Buttons
 
 <Canvas>
   <Story name="FilledButton">
@@ -28,13 +57,24 @@ Markdown documentation.
   </Story>
 </Canvas>
 
-## Button Design Types
+### Stroke or Outlined Buttons
 
-With `MDX`, we can define a story for `Checkbox` right in the middle of our
-Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in the middle of our
-Markdown documentation.
+<Canvas>
+  <Story name="Stroke Buttons">
+    <Stroke />
+  </Story>
+</Canvas>
 
-### --
+### Text Buttons
+
+<Canvas>
+  <Story name="Text Buttons">
+    <ButtonTxt />
+  </Story>
+</Canvas>
+
+
+### Floating Buttons
 
 <Canvas>
   <Story name="Floatings">
@@ -42,32 +82,4 @@ Markdown documentation.
   </Story>
 </Canvas>
 
-## Button Design States
-
-With `MDX`, we can define a story for `Checkbox` right in the middle of our
-Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in the middle of our
-Markdown documentation.
-
 ### --
-
-<Canvas>
-  <Story name="Stroke">
-    <Stroke />
-  </Story>
-</Canvas>
-
-## --
-
-With `MDX`, we can define a story for `Checkbox` right in the middle of our
-Markdown documentation.With `MDX`, we can define a story for `Checkbox` right in the middle of our
-Markdown documentation.
-
-### --
-
-<Canvas>
-  <Story name="Text Button">
-    <ButtonTxt />
-  </Story>
-</Canvas>
-
-

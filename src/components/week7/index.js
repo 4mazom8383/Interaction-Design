@@ -29,8 +29,19 @@ const PhoneFrame = styled.div`
     position: relative;
     /**/
     header{height: 260px; overflow: hidden;background: #98d2ff;}
-    img{width:70%; margin: 0 auto; display: block;}
-    textarea{marign: 0 auto;height: 120px;color: #757575;resize: vertical;width:280px;}
+    img{width:70%; margin: -13px auto; display: block;}
+    form{display: grid; justify-content: center;margin-top: 40px;}
+    textarea{
+      height: 100px;color: #757575;resize: vertical;width:280px;
+      border: 1px solid #B6B6B6;
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding-top:1em;padding-left:1em;
+      font-family: 'Roboto', sans-serif;
+      transition: height 0.2s;
+    }
+    textarea:focus-within{outline: #3994DA solid 2px;border: none;}
+    #txtarea{position:relative;}
 `
 
 /* FORM inputs*/
@@ -40,17 +51,20 @@ const FormTxt = styled.form`
 
     label{
         margin: 0px auto 8px auto;
+        position relative;
     }
 
-    label span{
+
+
+    label span, #txtarea>span{
         padding: 6px;
         background: white;
         max-height: 20px;
         opacity: 1;
         font-size: .775rem;
         margin-left: 10px;
-        position: relative;
-        top: -5px;
+        position: absolute;
+        top: -18px;
         opacity: 0;
         color: #B6B6B6;
         transition: opacity 0.2s, top 0.4s;
@@ -58,23 +72,23 @@ const FormTxt = styled.form`
     }
 
 
-    label:focus-within, input:focus-visible {
-        span{
-            top: 4px;
-            opacity: 1;
-            color: #7462E2;
-        }
-        input{
-            outline: #7462E2 solid 1px;
-        }
-        input[type="password"]::placeholder{
-            content:'JJJJJJJJJ';
-        }
+    label:focus-within, input:focus-visible, #txtarea:focus-within{
+      span{
+          top: -14px;
+          opacity: 1;
+          color: #3994DA;
+      }
+      input, textarea{
+          outline: #3994DA solid 2px;border: none;
+      }
+      input[type="password"]::placeholder{
+          content:'JJJJJJJJJ';
+      }
+      textarea{height: 150px;}
     }
 
       
     input{
-        
         display: block;
         width: 280px;
         height: 48px;
@@ -98,11 +112,12 @@ const FormTxt = styled.form`
         font-weight: bold;  
         text-transform: uppercase;
 
-        background: linear-gradient(180deg, #A77EFF 0%, #7D5AC8 100%);
+        background: linear-gradient(180deg, #7AC4FF 0%, #3994DA 100%);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.18), 0px 2px 2px rgba(0, 0, 0, 0.08);
         color: white;
         border: 1px solid #B6B6B6;
         box-sizing: border-box;
+        border: none;
         border-radius: 4px;
         transition: box-shadow 0.2s;
     }
@@ -115,35 +130,50 @@ const FormTxt = styled.form`
         box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.18), 0px 4px 4px rgba(0, 0, 0, 0.08), inset 280px 38px 4px rgba(255, 255, 255, 0.30);
     }
 `
+const Icon = styled.svg`
+    fill: #F4433A;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+`
 
 
 export  const ContactForm = () => {
   return [
     <StyledOutWrapper>
       <PhoneFrame>
-
-
         <header><img src={Header} /></header>
 
         <FormTxt>
           <label for="email">
               <span>Email Address</span>
+              <Icon viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" />
+              </Icon>
               <input type="text" name="email" class="form-control" placeholder="Enter email" id="email" />
-              <p className="text-danger"></p>
+              <p>Incorrect password try again</p>
           </label>
 
 
           <label for="password">
               <span>Password</span>
-              <input  type="password"  name="password" class="form-control"  placeholder="Enter password"  id="password" />
-              <p className="text-danger"></p>
+              <Icon viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" />
+              </Icon>
+              <input  type="email"  name="password" class="form-control"  placeholder="Enter password"  id="password" />
+              <p>Incorrect email try again</p>
           </label>
 
 
-          <textarea>
-            At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+          <div id='txtarea'>
+            <span>Text message</span>
+            <textarea placeholder="Your Message"></textarea>
+          </div>
+          <input type="submit" name="login" value="send" class="btn btn-success" />
 
-          </textarea>
 
         </FormTxt>
 
