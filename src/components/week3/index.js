@@ -14,7 +14,7 @@ const FilledStyle = styled.button`
     height: 36px;
     font-size: .875rem;
     text-transform: uppercase;
-    margin-right: 5em;
+    margin-right: 25px;
     padding: 0 16px 0 16px;
 
     background: linear-gradient(180deg, #FFB14A 0%, #FB8C00 100%);
@@ -108,6 +108,7 @@ export  const FilledButton = () => {
 
 /* FLOATING BUTTON */
 const Floating = styled.button`
+    margin-left: 25px;
     height: 56px;
     width: 56px;
     border: none;
@@ -190,11 +191,12 @@ const FevsBtn = styled.svg`
 
 export  const Floatings = () => {
     return [
-            <Floating><Fevs><path d="M12 22L10.405 20.5613C4.74 15.4714 1 12.1144 1 7.99455C1 4.6376 3.662 2 7.05 2C8.964 2 10.801 2.88283 12 4.27793C13.199 2.88283 15.036 2 16.95 2C20.338 2 23 4.6376 23 7.99455C23 12.1144 19.26 15.4714 13.595 20.5722L12 22Z" /></Fevs></Floating>,
             <BtnFloating>
                 <FevsBtn><path d="M12 22L10.405 20.5613C4.74 15.4714 1 12.1144 1 7.99455C1 4.6376 3.662 2 7.05 2C8.964 2 10.801 2.88283 12 4.27793C13.199 2.88283 15.036 2 16.95 2C20.338 2 23 4.6376 23 7.99455C23 12.1144 19.26 15.4714 13.595 20.5722L12 22Z" /></FevsBtn>
                 <span>Floting button</span>
-            </BtnFloating>
+            </BtnFloating>,
+            <Floating><Fevs><path d="M12 22L10.405 20.5613C4.74 15.4714 1 12.1144 1 7.99455C1 4.6376 3.662 2 7.05 2C8.964 2 10.801 2.88283 12 4.27793C13.199 2.88283 15.036 2 16.95 2C20.338 2 23 4.6376 23 7.99455C23 12.1144 19.26 15.4714 13.595 20.5722L12 22Z" /></Fevs></Floating>
+
     ] 
 }
 
@@ -202,7 +204,7 @@ export  const Floatings = () => {
 const Storke2 = styled.button`
 
     font-weight: bold;
-    margin-left: 4em;
+    margin-left: 25px;
 
     height: 36px;
     font-size: .875rem;
@@ -278,7 +280,7 @@ export  const Stroke = () => {
             </Storke>,
             <Storke2>
                 <Icon2 viewBox="0 0 24 24">
-                    <path d="M13.8399 4.8546L12.1307 4.8546V11.6307L5.35459 11.6307V13.3399L12.1307 13.3399V20.116L13.8399 20.116L13.8399 13.3399H20.616V11.6307H13.8399L13.8399 4.8546Z"/>
+                    <path d="M21 5.84211V7.73684H18.1579V10.5789H16.2632V7.73684H13.4211V5.84211H16.2632V3H18.1579V5.84211H21ZM18.1579 19.1053H4.89474V5.84211H10.5789V3.94737H4.89474C3.85263 3.94737 3 4.8 3 5.84211V19.1053C3 20.1474 3.85263 21 4.89474 21H18.1579C19.2 21 20.0526 20.1474 20.0526 19.1053V13.4211H18.1579V19.1053ZM14.3684 13.4211V17.2105H16.2632V13.4211H14.3684ZM10.5789 17.2105H12.4737V9.63158H10.5789V17.2105ZM8.68421 17.2105V11.5263H6.78947V17.2105H8.68421Z"/>
                 </Icon2>
                 <span>Storke</span>
             </Storke2>
@@ -316,7 +318,7 @@ const TxtBtn2 = styled.button`
     height: 36px;
     font-size: .875rem;
     text-transform: uppercase;
-    margin-left: 4em;
+    margin-left: 25px;
     padding: 0 16px 0 16px;
 
     display: inline-flex;
@@ -352,7 +354,11 @@ const Week3 = () => {
 
     return (
         <StyledWrapper>
+            <FilledButton />
+            <Stroke />
             <ButtonTxt />
+            <Floatings />
+
         </StyledWrapper>
     )
 }

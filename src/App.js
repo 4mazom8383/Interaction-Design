@@ -7,6 +7,7 @@ import Week5 from './components/week5';
 import Week7 from './components/week7';
 import Week8 from './components/week8';
 import Week9 from './components/week9';
+import Week11 from './components/week11';
 import styled from 'styled-components';
 
 import {
@@ -60,6 +61,9 @@ const Home = () => (
       <Li>
         <Link to="/week-9">Week-9 | Swiches</Link>
       </Li>
+      <Li>
+        <Link to="/week-11">Week-11 | Swiches</Link>
+      </Li>
     </Ul>
   </Content>
 );
@@ -97,6 +101,9 @@ function App() {
           </Route>
           <Route path="/week-9">
             <Week9 />
+          </Route>
+          <Route path="/week-11">
+            <Week11 />
           </Route>
           <Route path="/">
             <Home />

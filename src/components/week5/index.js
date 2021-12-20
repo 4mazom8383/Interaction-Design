@@ -23,6 +23,8 @@ const StyledOutWrapper = styled.div`
     height: 100vh;
     width: 100%;
     background: #eeee;
+
+
 `
 const FilledStyle2 = styled.a`
     height: 48px;
@@ -35,20 +37,28 @@ const FilledStyle2 = styled.a`
     border: 1px solid #198DE1;
     border: none;
     color: #757575;
-    transition: background 0.4s, color 0.2s;
+    transition: color 0.2s;
+    cursor: pointer;
 
-
+    &:focus{
+      background-color: #cecece !important;    
+      width: 216px;
+    }
     &:hover {
-        cursor: pointer;
-        background: #ECE0FD;  
-        color: #6200EE;
-        width: 216px;
-        svg{
-          fill: #6200EE;
-        }
+      background-color: #ebebeb;    
+      width: 216px;
     }
-    &:active {
+    &:active{
+      background-color: #eddfff;  
+      width: 216px;
+      color: #6e00f5;
+      svg{
+        fill: #6e00f5;
+      }
     }
+
+
+
 
 `
 const Icon = styled.svg`
@@ -481,7 +491,7 @@ export  const BottomNavigation  = () => {
 
 const Week5 = () => {
     return (
-        <HiddenMenu />
+        <BottomNavigation />
     )
 }
 
