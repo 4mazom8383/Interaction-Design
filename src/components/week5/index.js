@@ -57,6 +57,10 @@ const FilledStyle2 = styled.a`
       }
     }
 
+    &:visited{
+      background-color: red;
+    }
+
 
 
 
@@ -132,6 +136,10 @@ const PhoneFrame = styled.div`
     #full_screen, #Black_screen{width: 100vw; height: 0vh; background: #0404048f; position: absolute; z-index: 0;}
 
     #IconMenu{position: absolute; left: 30px; top: 60px;cursor: pointer;}
+
+    .containerOn, #container1{display:contents ;}
+    .containerOff{display:none !important;}
+
 `
 /*Menu Nav*/
 const Nav = styled.a`
@@ -164,6 +172,7 @@ const Tabs = styled.ul`
 
 /*Container*/
 const Container = styled.div`
+  display:none;
   margin: 0px 30px;
   width: 354px;
   height: 500px;
@@ -252,19 +261,22 @@ export  const MenuTabs = () => {
 
 
 /*Hidden Menu*/
-
-
 function show_HiddenNav() {
   var bottom_nav = document.getElementById("Nav"),
   full_screen = document.getElementById("full_screen");
   bottom_nav.style.cssText = "left: 0; transition: left 0.5s";
   full_screen.style.cssText = "height: 100vh";
+  
 }
 function hide_HiddenNav() {
   var bottom_nav = document.getElementById("Nav"),
   full_screen = document.getElementById("full_screen");
   bottom_nav.style.cssText = "left: -275px; transition: left 0.5s";
   full_screen.style.cssText = "height: 0vh";
+  
+  document.getElementById("container2").classList.add("containerOn");
+  document.getElementById("container1").classList.add("containerOff");
+
 }
 
 export  const HiddenMenu  = () => {
@@ -273,13 +285,15 @@ export  const HiddenMenu  = () => {
       <PhoneFrame>
       <div onClick={hide_HiddenNav} id="full_screen"></div>
       <a id="IconMenu" onClick={show_HiddenNav}>
-        <svg width="24" height="10" viewBox="0 0 24 10" fill="none">
-          <rect width="24" height="3" rx="1.5" fill="black"/>
-          <rect y="7" width="24" height="3" rx="1.5" fill="black"/>
+        <svg width="28" height="16" viewBox="0 0 32 20">
+              <rect y="8.4209" width="32" height="3.15789" fill="black"/>
+              <rect width="19.2" height="3.15789" fill="black"/>
+              <rect y="16.8423" width="12" height="3.15789" fill="black"/>
         </svg>
       </a>
 
-      <Container style={{display: "contents"}}>
+
+      <Container id="container1">
           <article>
             <div><img src={horse2}/></div>
             <div><img src={horse1}/></div>
@@ -289,7 +303,21 @@ export  const HiddenMenu  = () => {
             <div><img src={horse4}/></div>
             <div><img src={horse3}/></div>
           </article>
-        </Container>
+      </Container>
+
+      <Container id="container2">
+          <article>
+            <div><img src={cat2}/></div>
+            <div><img src={cat1}/></div>
+          </article>
+
+          <article>
+            <div><img src={cat4}/></div>
+            <div><img src={cat3}/></div>
+          </article>
+      </Container>
+
+
 
       <nav id='Nav'>
         <ul>
@@ -298,62 +326,62 @@ export  const HiddenMenu  = () => {
           </li>
 
           <li id="line"><hr /></li>
-          <li>
+          <li onClick={hide_HiddenNav}>
             <p>Mail</p>  
           </li> 
-          <li>
+          <li onClick={hide_HiddenNav}>
             <FilledStyle2>
               <Icon viewBox="0 0 24 24"><path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/></Icon>
               <span>Inbox</span>
             </FilledStyle2>
           </li>
-          <li>
+          <li onClick={hide_HiddenNav}>
             <FilledStyle2>
               <Icon viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></Icon>
               <span>Outbox</span>
             </FilledStyle2>
           </li>
-          <li>
+          <li onClick={hide_HiddenNav}>
             <FilledStyle2>
               <Icon viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></Icon>
               <span>Favorites</span>
             </FilledStyle2>
           </li>
-          <li>
+          <li onClick={hide_HiddenNav}>
             <FilledStyle2>
               <Icon viewBox="0 0 24 24"><path d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"/></Icon>
               <span>Archive</span>
             </FilledStyle2>
           </li>
-          <li>
+          <li onClick={hide_HiddenNav}>
             <FilledStyle2>
               <Icon viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></Icon>
               <span>Trash</span>
             </FilledStyle2>
           </li>  
-          <li>
+          <li onClick={hide_HiddenNav}>
             <FilledStyle2>
               <Icon viewBox="0 0 24 24"><path d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM12 17.3c-.72 0-1.3-.58-1.3-1.3 0-.72.58-1.3 1.3-1.3.72 0 1.3.58 1.3 1.3 0 .72-.58 1.3-1.3 1.3zm1-4.3h-2V7h2v6z"/></Icon>
               <span>Spam</span>
             </FilledStyle2>
           </li>  
         <li id="line"><hr /></li>
-        <li>
+        <li onClick={hide_HiddenNav}>
             <p>Work Folder</p>  
         </li> 
-        <li>
+        <li onClick={hide_HiddenNav}>
             <FilledStyle2>
               <Icon viewBox="0 0 24 24"><path d="M21,7h-6V5h6V7z M19,10.9c-0.32,0.07-0.66,0.1-1,0.1c-2.76,0-5-2.24-5-5c0-1.13,0.37-2.16,1-3L7,3C5.9,3,5,3.9,5,5v16l7-3 l7,3V10.9z"/></Icon>
               <span>Bookmark remove</span>
             </FilledStyle2>
           </li>
-          <li>
+          <li onClick={hide_HiddenNav}>
             <FilledStyle2>
               <Icon viewBox="0 0 24 24"><path d="M16.5 12c1.38 0 2.49-1.12 2.49-2.5S17.88 7 16.5 7C15.12 7 14 8.12 14 9.5s1.12 2.5 2.5 2.5zM9 11c1.66 0 2.99-1.34 2.99-3S10.66 5 9 5C7.34 5 6 6.34 6 8s1.34 3 3 3zm7.5 3c-1.83 0-5.5.92-5.5 2.75V19h11v-2.25c0-1.83-3.67-2.75-5.5-2.75zM9 13c-2.33 0-7 1.17-7 3.5V19h7v-2.25c0-.85.33-2.34 2.37-3.47C10.5 13.1 9.66 13 9 13z"/></Icon>
               <span>Meetings</span>
             </FilledStyle2>
           </li>  
-          <li>
+          <li onClick={hide_HiddenNav}>
             <FilledStyle2>
               <Icon viewBox="0 0 24 24"><path d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM12 17.3c-.72 0-1.3-.58-1.3-1.3 0-.72.58-1.3 1.3-1.3.72 0 1.3.58 1.3 1.3 0 .72-.58 1.3-1.3 1.3zm1-4.3h-2V7h2v6z"/></Icon>
               <span>Spam</span>
@@ -417,24 +445,39 @@ function hide() {
   Black_screen = document.getElementById("Black_screen");
   bottom_nav.style.cssText = "bottom: -400px; transition: bottom 0.5s";
   Black_screen.style.cssText = "height: 0vh";
+
+  document.getElementById("container2").classList.add("containerOn");
+  document.getElementById("container1").classList.add("containerOff");
 }
 export  const BottomNavigation  = () => {
   return [
     <StyledOutWrapper>
-      <PhoneFrame style={{display: "grid"}}>
+      <PhoneFrame >
         <div onClick={hide} id="Black_screen"></div>
         
-        <Container>
-          <article>
-            <div><img src={horse2}/></div>
-            <div><img src={horse1}/></div>
-          </article>
+          <Container id="container1">
+            <article>
+              <div><img src={horse2}/></div>
+              <div><img src={horse1}/></div>
+            </article>
 
-          <article>
-            <div><img src={horse4}/></div>
-            <div><img src={horse3}/></div>
-          </article>
-        </Container>
+            <article>
+              <div><img src={horse4}/></div>
+              <div><img src={horse3}/></div>
+            </article>
+          </Container>
+
+          <Container id="container2">
+            <article>
+              <div><img src={cat2}/></div>
+              <div><img src={cat1}/></div>
+            </article>
+
+            <article>
+              <div><img src={cat4}/></div>
+              <div><img src={cat3}/></div>
+            </article>
+          </Container>
 
         <BottoNavSection>
           <svg onClick={show} height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
@@ -450,31 +493,31 @@ export  const BottomNavigation  = () => {
               <p>Mail: <span>Scort@contact.me</span></p>  
             </li> 
             <li id="line"><hr /></li>
-            <li>
-            <FilledStyle2>
+            <li onClick={hide}>
+            <FilledStyle2 >
               <Icon viewBox="0 0 24 24"><path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"/></Icon>
               <span>Inbox</span>
             </FilledStyle2>
             </li>
-            <li>
+            <li onClick={hide}>
               <FilledStyle2>
                 <Icon viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></Icon>
                 <span>Outbox</span>
               </FilledStyle2>
             </li>
-            <li>
+            <li onClick={hide}>
               <FilledStyle2>
                 <Icon viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></Icon>
                 <span>Favorites</span>
               </FilledStyle2>
             </li>
-            <li>
+            <li onClick={hide}>
               <FilledStyle2>
                 <Icon viewBox="0 0 24 24"><path d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM12 17.5L6.5 12H10v-2h4v2h3.5L12 17.5zM5.12 5l.81-1h12l.94 1H5.12z"/></Icon>
                 <span>Archive</span>
               </FilledStyle2>
             </li>
-            <li>
+            <li onClick={hide}>
               <FilledStyle2>
                 <Icon viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></Icon>
                 <span>Trash</span>
