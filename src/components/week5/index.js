@@ -135,10 +135,11 @@ const PhoneFrame = styled.div`
     #line{height:8px;padding:0px;}
     #full_screen, #Black_screen{width: 100vw; height: 0vh; background: #0404048f; position: absolute; z-index: 0;}
 
-    #IconMenu{position: absolute; left: 30px; top: 60px;cursor: pointer;}
+    #IconMenu{position: absolute; left: 30px; top: 82px;cursor: pointer;}
 
     .containerOn, #container1{display:contents ;}
     .containerOff{display:none !important;}
+    #container3{display:contents ;}
 
 `
 /*Menu Nav*/
@@ -446,8 +447,8 @@ function hide() {
   bottom_nav.style.cssText = "bottom: -400px; transition: bottom 0.5s";
   Black_screen.style.cssText = "height: 0vh";
 
-  document.getElementById("container2").classList.add("containerOn");
-  document.getElementById("container1").classList.add("containerOff");
+  document.getElementById("container4").classList.add("containerOn");
+  document.getElementById("container3").classList.add("containerOff");
 }
 export  const BottomNavigation  = () => {
   return [
@@ -455,7 +456,7 @@ export  const BottomNavigation  = () => {
       <PhoneFrame >
         <div onClick={hide} id="Black_screen"></div>
         
-          <Container id="container1">
+          <Container id="container3">
             <article>
               <div><img src={horse2}/></div>
               <div><img src={horse1}/></div>
@@ -467,15 +468,15 @@ export  const BottomNavigation  = () => {
             </article>
           </Container>
 
-          <Container id="container2">
+          <Container id="container4">
             <article>
-              <div><img src={cat2}/></div>
-              <div><img src={cat1}/></div>
+              <div><img src={dog2}/></div>
+              <div><img src={dog1}/></div>
             </article>
 
             <article>
-              <div><img src={cat4}/></div>
-              <div><img src={cat3}/></div>
+              <div><img src={dog4}/></div>
+              <div><img src={dog3}/></div>
             </article>
           </Container>
 
@@ -534,7 +535,7 @@ export  const BottomNavigation  = () => {
 
 const Week5 = () => {
     return (
-        <BottomNavigation />
+        <HiddenMenu />
     )
 }
 
