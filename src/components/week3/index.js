@@ -2,21 +2,29 @@ import react from 'react';
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 60vh;
     width: 100%;
 `
+const Box = styled.div`
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 15vh;
+`
+
 
 /* FILLED BUTTON */
 const FilledStyle = styled.button`
+    margin: auto 2em auto 0;
+
     height: 36px;
     font-size: .875rem;
     text-transform: uppercase;
-    margin-right: 25px;
     padding: 0 16px 0 16px;
-
     background: linear-gradient(180deg, #FFB14A 0%, #FB8C00 100%);
     color: white;
     border: none;
@@ -94,13 +102,17 @@ const Icon = styled.svg`
   }
 `;
 
+
 export  const FilledButton = () => {
+    
     return [
-            <FilledStyle><b>filled button</b></FilledStyle>,
+        <Box>
+            <FilledStyle><b>filled button</b></FilledStyle>
             <FilledStyle2>
                 <Icon viewBox="0 0 24 24"><path d="M21 5.84211V7.73684H18.1579V10.5789H16.2632V7.73684H13.4211V5.84211H16.2632V3H18.1579V5.84211H21ZM18.1579 19.1053H4.89474V5.84211H10.5789V3.94737H4.89474C3.85263 3.94737 3 4.8 3 5.84211V19.1053C3 20.1474 3.85263 21 4.89474 21H18.1579C19.2 21 20.0526 20.1474 20.0526 19.1053V13.4211H18.1579V19.1053ZM14.3684 13.4211V17.2105H16.2632V13.4211H14.3684ZM10.5789 17.2105H12.4737V9.63158H10.5789V17.2105ZM8.68421 17.2105V11.5263H6.78947V17.2105H8.68421Z"/></Icon>
                 <span>filled button</span>
             </FilledStyle2>
+        </Box>
     ] 
 }
 
@@ -108,7 +120,7 @@ export  const FilledButton = () => {
 
 /* FLOATING BUTTON */
 const Floating = styled.button`
-    margin-left: 25px;
+    
     height: 56px;
     width: 56px;
     border: none;
@@ -145,6 +157,8 @@ const Fevs = styled.svg`
 `
 
 const BtnFloating = styled.button`
+    margin: auto 2em auto 0;
+
     font-size: .875rem;
     line-height: 2.25rem;
     font-weight: bold;
@@ -156,7 +170,6 @@ const BtnFloating = styled.button`
     height: 48px;
 
     color:white;
-    margin-left: 4em;
     border: none;
     border-radius: 80px;
     background: linear-gradient(180deg, #5EBBFF 0%, #3B90CD 100%);    
@@ -191,12 +204,13 @@ const FevsBtn = styled.svg`
 
 export  const Floatings = () => {
     return [
+        <Box>
             <BtnFloating>
                 <FevsBtn><path d="M12 22L10.405 20.5613C4.74 15.4714 1 12.1144 1 7.99455C1 4.6376 3.662 2 7.05 2C8.964 2 10.801 2.88283 12 4.27793C13.199 2.88283 15.036 2 16.95 2C20.338 2 23 4.6376 23 7.99455C23 12.1144 19.26 15.4714 13.595 20.5722L12 22Z" /></FevsBtn>
                 <span>Floting button</span>
-            </BtnFloating>,
+            </BtnFloating>
             <Floating><Fevs><path d="M12 22L10.405 20.5613C4.74 15.4714 1 12.1144 1 7.99455C1 4.6376 3.662 2 7.05 2C8.964 2 10.801 2.88283 12 4.27793C13.199 2.88283 15.036 2 16.95 2C20.338 2 23 4.6376 23 7.99455C23 12.1144 19.26 15.4714 13.595 20.5722L12 22Z" /></Fevs></Floating>
-
+        </Box>
     ] 
 }
 
@@ -204,8 +218,6 @@ export  const Floatings = () => {
 const Storke2 = styled.button`
 
     font-weight: bold;
-    margin-left: 25px;
-
     height: 36px;
     font-size: .875rem;
     text-transform: uppercase;
@@ -235,11 +247,12 @@ const Storke2 = styled.button`
 
 `
 const Storke = styled.button`
+
+    margin: auto 2em auto 0;
     font-size: .875rem;
     text-transform: uppercase;
     height: 36px;
     font-weight: bold;
-    margin-left: 8em;
     padding: 0 16px 0 16px;
 
 
@@ -275,26 +288,28 @@ const Icon2 = styled.svg`
 
 export  const Stroke = () => {
     return [
+        <Box>
             <Storke>
                 <span>Storke</span>
-            </Storke>,
+            </Storke>
             <Storke2>
                 <Icon2 viewBox="0 0 24 24">
                     <path d="M21 5.84211V7.73684H18.1579V10.5789H16.2632V7.73684H13.4211V5.84211H16.2632V3H18.1579V5.84211H21ZM18.1579 19.1053H4.89474V5.84211H10.5789V3.94737H4.89474C3.85263 3.94737 3 4.8 3 5.84211V19.1053C3 20.1474 3.85263 21 4.89474 21H18.1579C19.2 21 20.0526 20.1474 20.0526 19.1053V13.4211H18.1579V19.1053ZM14.3684 13.4211V17.2105H16.2632V13.4211H14.3684ZM10.5789 17.2105H12.4737V9.63158H10.5789V17.2105ZM8.68421 17.2105V11.5263H6.78947V17.2105H8.68421Z"/>
                 </Icon2>
                 <span>Storke</span>
             </Storke2>
+        </Box>
     ] 
 }
 
 /* Txt */
 const TxtBtn = styled.button`
 
+    margin: auto 2em auto 0;
     font-size: .875rem;
     text-transform: uppercase;
     height: 36px;
     font-weight: bold;
-    margin-left: 8em;
     padding: 0 16px 0 16px;
 
     color: #198DE1;
@@ -318,7 +333,6 @@ const TxtBtn2 = styled.button`
     height: 36px;
     font-size: .875rem;
     text-transform: uppercase;
-    margin-left: 25px;
     padding: 0 16px 0 16px;
 
     display: inline-flex;
@@ -340,8 +354,10 @@ const TxtBtn2 = styled.button`
 
 export  const ButtonTxt = () => {
     return [
-        <TxtBtn>Txt btn</TxtBtn>,
-        <TxtBtn2><Icon2 viewBox="0 0 24 24"><path d="M21 5.84211V7.73684H18.1579V10.5789H16.2632V7.73684H13.4211V5.84211H16.2632V3H18.1579V5.84211H21ZM18.1579 19.1053H4.89474V5.84211H10.5789V3.94737H4.89474C3.85263 3.94737 3 4.8 3 5.84211V19.1053C3 20.1474 3.85263 21 4.89474 21H18.1579C19.2 21 20.0526 20.1474 20.0526 19.1053V13.4211H18.1579V19.1053ZM14.3684 13.4211V17.2105H16.2632V13.4211H14.3684ZM10.5789 17.2105H12.4737V9.63158H10.5789V17.2105ZM8.68421 17.2105V11.5263H6.78947V17.2105H8.68421Z"/></Icon2><span>TXT btn</span></TxtBtn2>
+        <Box> 
+            <TxtBtn>Txt btn</TxtBtn>
+            <TxtBtn2><Icon2 viewBox="0 0 24 24"><path d="M21 5.84211V7.73684H18.1579V10.5789H16.2632V7.73684H13.4211V5.84211H16.2632V3H18.1579V5.84211H21ZM18.1579 19.1053H4.89474V5.84211H10.5789V3.94737H4.89474C3.85263 3.94737 3 4.8 3 5.84211V19.1053C3 20.1474 3.85263 21 4.89474 21H18.1579C19.2 21 20.0526 20.1474 20.0526 19.1053V13.4211H18.1579V19.1053ZM14.3684 13.4211V17.2105H16.2632V13.4211H14.3684ZM10.5789 17.2105H12.4737V9.63158H10.5789V17.2105ZM8.68421 17.2105V11.5263H6.78947V17.2105H8.68421Z"/></Icon2><span>TXT btn</span></TxtBtn2>
+        </Box>
     ] 
 }
 
@@ -354,7 +370,8 @@ const Week3 = () => {
 
     return (
         <StyledWrapper>
-            <FilledButton />
+            
+            <FilledButton style={{display: "inline-flex"}}></FilledButton>
             <Stroke />
             <ButtonTxt />
             <Floatings />
